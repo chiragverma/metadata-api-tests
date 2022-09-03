@@ -5,7 +5,7 @@ describe('Get metadata property', () => {
   it('Should get metadata property', () => {
     cy.request({
         method: 'GET',
-        url: 'http://localhost:4441/metadata/919e8a1922aaa764b1d66407c6f62244e77081215f385b60a62091494861707079436f696e/properties/name',
+        url: 'https://metadata-server-mock.herokuapp.com/metadata/919e8a1922aaa764b1d66407c6f62244e77081215f385b60a62091494861707079436f696e/properties/name',
 
     }).then((response) => {
             expect(response.status).to.eq(200);
