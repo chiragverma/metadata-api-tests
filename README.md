@@ -1,1 +1,20 @@
-# metadata-tests-docker
+# Cypress API Tests
+
+
+# To run tests locally:
+
+```
+git clone https://github.com/chiragverma/metadata-api-tests.git
+```
+
+```
+cd metadata-api-tests
+```
+
+```
+npm install
+```
+
+```
+npx cypress run
+```
