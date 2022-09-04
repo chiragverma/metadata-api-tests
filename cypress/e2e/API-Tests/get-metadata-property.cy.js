@@ -8,9 +8,7 @@ describe('Get metadata property', () => {
         url: 'https://metadata-server-mock.herokuapp.com/metadata/919e8a1922aaa764b1d66407c6f62244e77081215f385b60a62091494861707079436f696e/properties/name',
 
     }).then((response) => {
-            expect(response.status).to.eq(200);
-            expect(response.body).to.not.be.null
-            expect(response.headers['content-type']).to.include('application/json')
+            cy.commonAssertion()
             expect(response.body).to.have.property('sequenceNumber')
             expect(response.body).to.have.property('value').equal('HappyCoin')
             expect(response.body).to.have.property('signatures')

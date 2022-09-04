@@ -1,7 +1,6 @@
 import '../../support/commands.js';
 
 describe('Get metadata', () => {
-    
 
   it('Should get metadata', () => {
     cy.request({
@@ -9,9 +8,7 @@ describe('Get metadata', () => {
         url: 'https://metadata-server-mock.herokuapp.com/metadata/919e8a1922aaa764b1d66407c6f62244e77081215f385b60a62091494861707079436f696e',
 
     }).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response.body).to.not.be.null
-        expect(response.headers['content-type']).to.include('application/json')
+        cy.commonAssertion()
         expect(response.body).to.have.property('subject').equal('919e8a1922aaa764b1d66407c6f62244e77081215f385b60a62091494861707079436f696e')
         expect(response.body.url.value).equal('https://happy.io')
         expect(response.body.name.value).equal('HappyCoin')
